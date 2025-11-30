@@ -1,0 +1,229 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+const title = 'Portfolio: Taras Smereka Projects';
+const description =
+  'Open source work and projects: Hedera protocol optimization (5.6x improvement), network monitoring tools, smart contract platforms, distributed systems engineering.';
+---
+
+<Layout title={title} description={description}>
+  <!-- Hero Section -->
+  <section class="border-b border-gray-200">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Portfolio</h1>
+      <p class="text-xl text-gray-700">
+        A selection of my recent work, including open source contributions and side projects spanning protocol
+        optimization, blockchain infrastructure, and high-performance backend systems.
+      </p>
+    </div>
+  </section>
+
+  <!-- Open Source & Project Work Section -->
+  <section class="border-b border-gray-200">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Open Source & Project Work</h2>
+
+      <div class="space-y-8">
+        <!-- Hedera Protocol Buffer Optimization -->
+        <div class="rounded-lg border border-gray-300 bg-gray-50 p-6 md:p-8">
+          <div class="mb-4">
+            <span class="inline-block px-3 py-1 text-xs font-semibold text-gray-700 bg-white border border-gray-200 rounded">
+              Protocol Optimization
+            </span>
+          </div>
+
+          <h3 class="text-2xl font-semibold text-gray-900 mb-2">Hedera Hashgraph Protocol Contributions</h3>
+          <p class="text-gray-600 font-medium mb-4">5.6x Performance Improvement</p>
+
+          <p class="text-gray-700 mb-6 leading-relaxed">
+            Contributed to Hedera's PBJ (Protocol Buffer for Java) repository by identifying and fixing serialization
+            bottlenecks. Used systematic benchmarking with JMH to measure before/after performance.
+          </p>
+
+          <div class="mb-6">
+            <h4 class="font-semibold text-gray-900 mb-3">Key Achievements:</h4>
+            <ul class="space-y-2 text-gray-700 ml-4">
+              <li class="flex gap-3">
+                <span class="text-gray-400">•</span>
+                <span>Analyzed protocol buffer operations to find inefficiencies</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-gray-400">•</span>
+                <span>Implemented optimizations that improved throughput 5.6x</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-gray-400">•</span>
+                <span>Added comprehensive test coverage</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-gray-400">•</span>
+                <span>Improved error messages for better developer experience</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mb-6">
+            <h4 class="font-semibold text-gray-900 mb-3">Technologies:</h4>
+            <div class="flex flex-wrap gap-2">
+              {
+                ['Java', 'Protocol Buffers', 'JMH Benchmarking', 'Distributed Systems'].map((tech) => (
+                  <span class="px-3 py-1 text-sm font-medium text-gray-600 bg-white border border-gray-200 rounded">
+                    {tech}
+                  </span>
+                ))
+              }
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-3 pt-6 border-t border-gray-200">
+            <a
+              href="https://github.com/kaldun-tech"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors underline"
+            >
+              Merged PR →
+            </a>
+            <a
+              href="https://github.com/kaldun-tech"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors underline"
+            >
+              Additional contributions →
+            </a>
+          </div>
+        </div>
+
+        <!-- Network Monitoring Tool -->
+        <ProjectCard
+          title="Blockchain Network Monitor"
+          description="Building a comprehensive real-time monitoring tool for Hedera network in Go. Tracks transaction throughput, consensus metrics, network health, and provides time-series analysis of network behavior. This is an active development project demonstrating modern distributed systems patterns."
+          technologies={['Go', 'PostgreSQL', 'gRPC', 'Protocol Buffers', 'Time-series Analysis']}
+          links={[{ label: 'View repository', href: 'https://github.com/kaldun-tech/hedera-network-monitor' }]}
+          featured={true}
+        />
+
+        <!-- Token Vesting Smart Contract Platform -->
+        <ProjectCard
+          title="Token Vesting Smart Contract Platform"
+          description="Production-ready Solidity platform for managing time-locked token vesting schedules. Supports multiple beneficiaries, configurable vesting periods, cliff implementations, and revocation mechanisms. Built a complete system including smart contracts with comprehensive test coverage, gas optimization (typical 30-50% reductions), web interface for vesting schedule management, and deployment to multiple networks."
+          technologies={['Solidity', 'Hardhat', 'Go', 'Next.js', 'PostgreSQL', 'Docker']}
+          links={[{ label: 'View repository', href: 'https://github.com/kaldun-tech/token-vesting-smart-contract' }]}
+          featured={true}
+        />
+
+        <!-- PC Parts Price Tracker -->
+        <ProjectCard
+          title="PC Parts Price Tracker"
+          description="AWS-native application demonstrating proper serverless patterns and infrastructure-as-code practices. Tracks PC component prices across retailers and sends Discord notifications on price changes. Built to showcase AWS CDK for infrastructure as code, event-driven serverless architecture, proper separation of concerns, type-hinted Python with test coverage, and cost-effective scaling patterns."
+          technologies={['Python', 'AWS Lambda', 'DynamoDB', 'Parameter Store', 'EventBridge', 'AWS CDK', 'Playwright']}
+          links={[{ label: 'View repository', href: 'https://github.com/kaldun-tech/pc-parts-scraper' }]}
+          featured={true}
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- SCADA Systems at AspenTech/OSI Section -->
+  <section class="border-b border-gray-200">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Mission-Critical Systems</h2>
+
+      <div class="rounded-lg border border-gray-200 bg-white p-6 md:p-8">
+        <h3 class="text-2xl font-semibold text-gray-900 mb-2">SCADA Systems at AspenTech/OSI (2015-2024)</h3>
+        <p class="text-gray-600 font-medium mb-6">9 years of production systems engineering</p>
+
+        <p class="text-gray-700 mb-6 leading-relaxed">
+          Spent 9 years optimizing mission-critical power grid control systems that directly impact utility operations
+          and customer service. This foundational experience shaped my approach to building systems that must be
+          reliable, performant, and cost-effective at scale.
+        </p>
+
+        <div>
+          <h4 class="font-semibold text-gray-900 mb-4">Key Contributions:</h4>
+          <ul class="space-y-3 text-gray-700">
+            <li class="flex gap-3">
+              <span class="text-gray-400">•</span>
+              <span>Real-time data processing for millions of customers</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-gray-400">•</span>
+              <span>Database performance tuning (Oracle, PostgreSQL)</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-gray-400">•</span>
+              <span>High-availability distributed systems</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-gray-400">•</span>
+              <span>Build process modernization and DevOps practices</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-gray-400">•</span>
+              <span>Java/C# enterprise application development</span>
+            </li>
+          </ul>
+        </div>
+
+        <p class="text-gray-600 text-sm mt-6 pt-6 border-t border-gray-200">
+          This work isn't open source, but it's the foundation of my approach to building production systems that can't
+          fail.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Project Info Section -->
+  <section class="border-b border-gray-200">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">About My Work</h2>
+
+      <div class="space-y-8">
+        <div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Production Mindset</h3>
+          <p class="text-gray-700 leading-relaxed">
+            Every project I work on is built with production requirements in mind—comprehensive testing, proper error
+            handling, documentation, and monitoring. I measure success not by initial delivery, but by long-term
+            maintainability and reliability.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Performance-First Approach</h3>
+          <p class="text-gray-700 leading-relaxed">
+            I don't optimize blindly. Every change is backed by data—benchmarks, profiling, and rigorous testing. This
+            approach led to the 5.6x improvement in Hedera's protocol buffer implementation and continues to guide my
+            work on high-performance systems.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Full-Stack Capability</h3>
+          <p class="text-gray-700 leading-relaxed">
+            From protocol design to smart contracts to cloud infrastructure, I'm comfortable working at any level of
+            the stack. This breadth allows me to understand systems holistically and make optimizations that wouldn't
+            be visible at a single layer.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-gray-50">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <div class="text-center max-w-2xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Interested in Working Together?</h2>
+        <p class="text-lg text-gray-700 mb-8">
+          I'm always open to discussing new opportunities, challenges, or just technical problems worth solving.
+        </p>
+        <Button href="https://calendly.com/kaldun/meeting" target="_blank" rel="noopener noreferrer" variant="primary">
+          Schedule a Call
+        </Button>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,69 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="border-t border-gray-200 bg-white">
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <!-- Contact -->
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-4">Get in touch</h3>
+        <a
+          href="https://calendly.com/kaldun/meeting"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+        >
+          Schedule a call
+        </a>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-4">Links</h3>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a
+              href="https://github.com/kaldun-tech"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-600 hover:text-gray-900 transition-colors"
+            >
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/taras-smereka/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-600 hover:text-gray-900 transition-colors"
+            >
+              LinkedIn
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Location -->
+      <div>
+        <h3 class="font-semibold text-gray-900 mb-4">Based in</h3>
+        <p class="text-sm text-gray-600">Broomfield, Colorado</p>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-200 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <p class="text-sm text-gray-600">
+        © {currentYear} Taras Smereka. All rights reserved.
+      </p>
+      <p class="text-sm text-gray-500">
+        Built with <a
+          href="https://astro.build"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-gray-900 transition-colors"
+        >Astro</a> and Tailwind CSS
+      </p>
+    </div>
+  </div>
+</footer>

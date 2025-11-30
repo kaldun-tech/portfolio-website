@@ -1,0 +1,276 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+const title = 'Taras Smereka: Distributed Systems Engineer';
+const description =
+  'Distributed systems engineer with 9+ years optimizing mission-critical infrastructure. Contributing to Hedera Hashgraph. Available for protocol engineering roles and consulting.';
+---
+
+<Layout title={title} description={description}>
+  <!-- Hero Section -->
+  <section class="border-b border-gray-200">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+          Distributed Systems Engineer Specializing in Protocol Optimization
+        </h1>
+
+        <p class="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
+          9+ years building mission-critical infrastructure for power grids serving millions. Contributing to Hedera
+          Hashgraph protocol improvements. Available for protocol engineering roles and select consulting engagements.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <Button href="/portfolio" variant="primary">View My Work</Button>
+          <Button
+            href="https://calendly.com/kaldun/meeting"
+            target="_blank"
+            rel="noopener noreferrer"
+            variant="secondary"
+          >
+            Schedule a Call
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What I Do Section -->
+  <section class="border-b border-gray-200">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">What I Do</h2>
+
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+        I optimize distributed systems that can't afford to fail. My background is in SCADA systems for electrical
+        utilities—infrastructure where downtime affects millions of customers. Now I'm applying that production
+        discipline to blockchain protocols and high-performance backends.
+      </p>
+
+      <div class="space-y-4">
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-6 h-6 rounded-full bg-gray-900 text-white flex items-center justify-center text-sm font-semibold">
+            ✓
+          </div>
+          <div>
+            <p class="text-gray-700">
+              <strong>5.6x performance improvement</strong> in Hedera's protocol buffer implementation
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-6 h-6 rounded-full bg-gray-900 text-white flex items-center justify-center text-sm font-semibold">
+            ✓
+          </div>
+          <div>
+            <p class="text-gray-700">Building network monitoring tools for blockchain infrastructure</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-6 h-6 rounded-full bg-gray-900 text-white flex items-center justify-center text-sm font-semibold">
+            ✓
+          </div>
+          <div>
+            <p class="text-gray-700">Contributing to consensus node error handling and developer experience</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="border-b border-gray-200">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Experience</h2>
+
+      <div class="space-y-12">
+        <!-- AspenTech/OSI -->
+        <div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">AspenTech/OSI (2015-2024)</h3>
+          <p class="text-gray-600 font-medium mb-4">Senior Software Engineer - SCADA Systems</p>
+          <p class="text-gray-700 mb-4">Built and optimized mission-critical power grid control systems:</p>
+          <ul class="space-y-2 text-gray-700 ml-4">
+            <li class="flex gap-3">
+              <span class="text-gray-400">•</span>
+              <span>Real-time data processing for utilities serving millions</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-gray-400">•</span>
+              <span>High-availability distributed systems with strict reliability requirements</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-gray-400">•</span>
+              <span>Performance optimization and database tuning</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-gray-400">•</span>
+              <span>DevOps champion for build process modernization</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Open Source -->
+        <div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Open Source Contributions</h3>
+          <p class="text-gray-600 font-medium mb-4">Hedera Hashgraph Protocol Infrastructure</p>
+          <p class="text-gray-700 mb-4">Currently contributing to Hedera Hashgraph protocol infrastructure:</p>
+          <ul class="space-y-2 text-gray-700 ml-4">
+            <li class="flex gap-3">
+              <span class="text-gray-400">•</span>
+              <span>Protocol buffer serialization optimization (5.6x improvement)</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-gray-400">•</span>
+              <span>Consensus node improvements</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-gray-400">•</span>
+              <span>Developer experience enhancements</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Background Section -->
+  <section class="border-b border-gray-200">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Technical Background</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-4">Core Competencies</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex gap-2">
+              <span class="text-gray-400">→</span>
+              <span>Distributed systems engineering and protocol optimization</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-gray-400">→</span>
+              <span>Performance benchmarking and systematic bottleneck identification</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-gray-400">→</span>
+              <span>Production systems that handle real-world scale</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-gray-400">→</span>
+              <span>Test-driven development with comprehensive CI/CD</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-4">Tech Stack</h3>
+          <div class="flex flex-wrap gap-2">
+            {
+              ['Java', 'Python', 'Go', 'Solidity', 'Protocol Buffers', 'gRPC', 'PostgreSQL', 'AWS', 'Docker'].map(
+                (tech) => (
+                  <span class="px-3 py-1 text-sm font-medium text-gray-600 bg-gray-100 rounded">
+                    {tech}
+                  </span>
+                )
+              )
+            }
+          </div>
+
+          <h3 class="text-lg font-semibold text-gray-900 mt-6 mb-4">Education</h3>
+          <ul class="space-y-2 text-gray-700 text-sm">
+            <li>BS Mathematics & Computer Science, Minor in Economics</li>
+            <li>BBA Finance & Accounting</li>
+            <li>AWS Solutions Architect Associate</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Section -->
+  <section class="border-b border-gray-200">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Featured Projects</h2>
+
+      <div class="space-y-6">
+        <ProjectCard
+          title="Hedera Protocol Buffer Optimization"
+          description="Identified and fixed serialization bottlenecks in Hedera's PBJ library through systematic benchmarking. Result: 5.6x throughput improvement in protocol buffer operations."
+          technologies={['Java', 'Protocol Buffers', 'JMH Benchmarking']}
+          links={[{ label: 'View merged PRs', href: 'https://github.com/kaldun-tech' }]}
+          featured={true}
+        />
+
+        <ProjectCard
+          title="Network Monitoring Tool"
+          description="Building real-time monitoring and analytics for Hedera network health, transaction throughput, and consensus metrics."
+          technologies={['Go', 'PostgreSQL', 'Time-series Analysis']}
+          links={[{ label: 'View repository', href: 'https://github.com/kaldun-tech/hedera-network-monitor' }]}
+          featured={true}
+        />
+
+        <ProjectCard
+          title="Token Vesting Platform"
+          description="Production-ready smart contract system for time-locked token distribution with comprehensive testing and gas optimization."
+          technologies={['Solidity', 'Hardhat', 'Go', 'Next.js', 'PostgreSQL']}
+          links={[{ label: 'View repository', href: 'https://github.com/kaldun-tech/token-vesting-smart-contract' }]}
+        />
+
+        <ProjectCard
+          title="PC Parts Price Tracker"
+          description="Serverless price monitoring with proper AWS CDK infrastructure-as-code patterns and event-driven architecture."
+          technologies={['Python', 'AWS Lambda', 'DynamoDB', 'CDK']}
+          links={[{ label: 'View repository', href: 'https://github.com/kaldun-tech/pc-parts-scraper' }]}
+        />
+      </div>
+
+      <div class="mt-12 pt-12 border-t border-gray-200">
+        <p class="text-gray-700 mb-6">Ready to see all my work?</p>
+        <Button href="/portfolio" variant="primary">Explore Full Portfolio</Button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Available For Section -->
+  <section class="border-b border-gray-200">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Available For</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="rounded-lg border border-gray-200 bg-white p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Protocol Engineering Roles</h3>
+          <p class="text-gray-700 mb-4">
+            I'm actively seeking full-time positions in protocol development, distributed systems, or blockchain
+            infrastructure.
+          </p>
+        </div>
+
+        <div class="rounded-lg border border-gray-200 bg-white p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Select Consulting Engagements</h3>
+          <p class="text-gray-700 mb-4">
+            Through Kaldun Technologies LLC, I take on consulting projects focused on backend architecture, protocol
+            optimization, AWS infrastructure, and smart contract development.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-gray-50 border-b border-gray-200">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <div class="text-center max-w-2xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Let's Talk</h2>
+        <p class="text-lg text-gray-700 mb-8">
+          Whether you're looking to discuss protocol engineering, need help optimizing your systems, or just want to
+          explore opportunities—I'm here to help.
+        </p>
+        <Button href="https://calendly.com/kaldun/meeting" target="_blank" rel="noopener noreferrer" variant="primary">
+          Schedule a Call
+        </Button>
+      </div>
+    </div>
+  </section>
+</Layout>

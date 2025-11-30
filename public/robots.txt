@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://taras-smereka.com/sitemap-index.xml
+
+# Disallow crawling of admin or private areas
+Disallow: /admin
+Disallow: /private
