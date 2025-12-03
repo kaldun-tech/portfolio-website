@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create:*)",
+      "Bash(npm install:*)",
+      "Bash(npx tailwindcss:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(npm run build:*)",
+      "Bash(curl:*)",
+      "Bash(npm audit:*)",
+      "Bash(git checkout:*)",
+      "Bash(git add:*)",
+      "WebFetch(domain:kalduntech.com)",
+      "Bash(npm run dev:*)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:taraskaldun.substack.com)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

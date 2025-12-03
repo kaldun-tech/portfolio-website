@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Button from '../components/Button.astro';
 import ProjectCard from '../components/ProjectCard.astro';
+import { projects } from '../data/projects';
 
 const title = 'Portfolio: Taras Smereka Projects';
 const description =
@@ -27,41 +28,87 @@ const description =
 
       <div class="space-y-8">
         <!-- Hedera Protocol Buffer Optimization -->
-        <div class="rounded-lg border border-gray-300 bg-gray-50 p-6 md:p-8">
+        <div class="rounded-lg border border-gray-300 bg-background-light p-6 md:p-8">
           <div class="mb-4">
             <span class="inline-block px-3 py-1 text-xs font-semibold text-gray-700 bg-white border border-gray-200 rounded">
-              Protocol Optimization
+              Open Source Contributions
             </span>
           </div>
 
-          <h3 class="text-2xl font-semibold text-gray-900 mb-2">Hedera Hashgraph Protocol Contributions</h3>
-          <p class="text-gray-600 font-medium mb-4">5.6x Performance Improvement</p>
+          <h3 class="text-2xl font-semibold text-gray-900 mb-2">Hedera Hashgraph & Hiero Protocol</h3>
+          <p class="text-gray-600 font-medium mb-4">4 Merged Pull Requests</p>
 
           <p class="text-gray-700 mb-6 leading-relaxed">
-            Contributed to Hedera's PBJ (Protocol Buffer for Java) repository by identifying and fixing serialization
-            bottlenecks. Used systematic benchmarking with JMH to measure before/after performance.
+            Contributing to Hedera's Protocol Buffer for Java (PBJ) library and Hiero Consensus Node. Focus on performance optimization, developer experience improvements, and network topology configuration.
           </p>
 
           <div class="mb-6">
-            <h4 class="font-semibold text-gray-900 mb-3">Key Achievements:</h4>
-            <ul class="space-y-2 text-gray-700 ml-4">
-              <li class="flex gap-3">
-                <span class="text-gray-400">•</span>
-                <span>Analyzed protocol buffer operations to find inefficiencies</span>
-              </li>
-              <li class="flex gap-3">
-                <span class="text-gray-400">•</span>
-                <span>Implemented optimizations that improved throughput 5.6x</span>
-              </li>
-              <li class="flex gap-3">
-                <span class="text-gray-400">•</span>
-                <span>Added comprehensive test coverage</span>
-              </li>
-              <li class="flex gap-3">
-                <span class="text-gray-400">•</span>
-                <span>Improved error messages for better developer experience</span>
-              </li>
-            </ul>
+            <h4 class="font-semibold text-gray-900 mb-3">Contributions:</h4>
+            <div class="space-y-4">
+              <div>
+                <p class="text-gray-900 font-medium mb-1">
+                  <a
+                    href="https://github.com/hashgraph/pbj/pull/605"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="hover:text-brand-blue transition-colors"
+                  >
+                    DirectBufferedData Performance Optimization (#605)
+                  </a>
+                </p>
+                <p class="text-gray-700 text-sm ml-4">
+                  Achieved 5.6x throughput improvement for large array operations by optimizing bulk comparison threshold from 8 to 32 bytes. Added comprehensive JMH benchmarks and testing framework. First open source contribution.
+                </p>
+              </div>
+
+              <div>
+                <p class="text-gray-900 font-medium mb-1">
+                  <a
+                    href="https://github.com/hashgraph/pbj/pull/654"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="hover:text-brand-blue transition-colors"
+                  >
+                    Improved Proto Import Error Messages (#654)
+                  </a>
+                </p>
+                <p class="text-gray-700 text-sm ml-4">
+                  Enhanced developer experience by fixing error messages to display actual proto type names instead of Java object representations. Added troubleshooting guidance for common import failures.
+                </p>
+              </div>
+
+              <div>
+                <p class="text-gray-900 font-medium mb-1">
+                  <a
+                    href="https://github.com/hashgraph/pbj/pull/635"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="hover:text-brand-blue transition-colors"
+                  >
+                    OneOf Field Handling Investigation (#635)
+                  </a>
+                </p>
+                <p class="text-gray-700 text-sm ml-4">
+                  Conducted comprehensive analysis of switch statement optimization for oneOf fields. Demonstrated that proposed changes would break 10.97% of test suite due to protobuf field ordering requirements. Recommended maintaining current implementation based on performance data.
+                </p>
+              </div>
+
+              <div>
+                <p class="text-gray-900 font-medium mb-1">
+                  <a
+                    href="https://github.com/hiero-ledger/hiero-consensus-node/pull/21927"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="hover:text-brand-blue transition-colors"
+                  >
+                    Configurable Network Topology (#21927)
+                  </a>
+                </p>
+                <p class="text-gray-700 text-sm ml-4">
+                  Added API for configuring mesh and geographic network topologies before node initialization. Implemented builder pattern with immutable configuration records and comprehensive test coverage.
+                </p>
+              </div>
+            </div>
           </div>
 
           <div class="mb-6">
@@ -79,61 +126,44 @@ const description =
 
           <div class="flex flex-wrap gap-3 pt-6 border-t border-gray-200">
             <a
-              href="https://github.com/kaldun-tech"
+              href="https://github.com/hashgraph/pbj/pulls?q=is%3Apr+author%3Akaldun-tech"
               target="_blank"
               rel="noopener noreferrer"
-              class="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors underline"
+              class="text-sm font-medium text-brand-blue hover:text-brand-blue-dark transition-colors underline"
             >
-              Merged PR →
+              View PBJ contributions →
             </a>
             <a
-              href="https://github.com/kaldun-tech"
+              href="https://github.com/hiero-ledger/hiero-consensus-node/pulls?q=is%3Apr+author%3Akaldun-tech"
               target="_blank"
               rel="noopener noreferrer"
-              class="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors underline"
+              class="text-sm font-medium text-brand-blue hover:text-brand-blue-dark transition-colors underline"
             >
-              Additional contributions →
+              View Hiero contributions →
             </a>
           </div>
         </div>
 
-        <!-- Network Monitoring Tool -->
-        <ProjectCard
-          title="Blockchain Network Monitor"
-          description="Building a comprehensive real-time monitoring tool for Hedera network in Go. Tracks transaction throughput, consensus metrics, network health, and provides time-series analysis of network behavior. This is an active development project demonstrating modern distributed systems patterns."
-          technologies={['Go', 'PostgreSQL', 'gRPC', 'Protocol Buffers', 'Time-series Analysis']}
-          links={[{ label: 'View repository', href: 'https://github.com/kaldun-tech/hedera-network-monitor' }]}
-          featured={true}
-        />
-
-        <!-- Token Vesting Smart Contract Platform -->
-        <ProjectCard
-          title="Token Vesting Smart Contract Platform"
-          description="Production-ready Solidity platform for managing time-locked token vesting schedules. Supports multiple beneficiaries, configurable vesting periods, cliff implementations, and revocation mechanisms. Built a complete system including smart contracts with comprehensive test coverage, gas optimization (typical 30-50% reductions), web interface for vesting schedule management, and deployment to multiple networks."
-          technologies={['Solidity', 'Hardhat', 'Go', 'Next.js', 'PostgreSQL', 'Docker']}
-          links={[{ label: 'View repository', href: 'https://github.com/kaldun-tech/token-vesting-smart-contract' }]}
-          featured={true}
-        />
-
-        <!-- PC Parts Price Tracker -->
-        <ProjectCard
-          title="PC Parts Price Tracker"
-          description="AWS-native application demonstrating proper serverless patterns and infrastructure-as-code practices. Tracks PC component prices across retailers and sends Discord notifications on price changes. Built to showcase AWS CDK for infrastructure as code, event-driven serverless architecture, proper separation of concerns, type-hinted Python with test coverage, and cost-effective scaling patterns."
-          technologies={['Python', 'AWS Lambda', 'DynamoDB', 'Parameter Store', 'EventBridge', 'AWS CDK', 'Playwright']}
-          links={[{ label: 'View repository', href: 'https://github.com/kaldun-tech/pc-parts-scraper' }]}
-          featured={true}
-        />
+        {projects.filter(p => p.id !== 'hedera-contributions').map((project) => (
+          <ProjectCard
+            title={project.title}
+            description={project.description}
+            technologies={project.technologies}
+            links={project.links}
+            featured={project.featured}
+          />
+        ))}
       </div>
     </div>
   </section>
 
-  <!-- SCADA Systems at AspenTech/OSI Section -->
+  <!-- SCADA Systems at AspenTech OSI Section -->
   <section class="border-b border-gray-200">
     <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
       <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Mission-Critical Systems</h2>
 
       <div class="rounded-lg border border-gray-200 bg-white p-6 md:p-8">
-        <h3 class="text-2xl font-semibold text-gray-900 mb-2">SCADA Systems at AspenTech/OSI (2015-2024)</h3>
+        <h3 class="text-2xl font-semibold text-gray-900 mb-2">SCADA Systems at AspenTech OSI (2015-2024)</h3>
         <p class="text-gray-600 font-medium mb-6">9 years of production systems engineering</p>
 
         <p class="text-gray-700 mb-6 leading-relaxed">
@@ -185,7 +215,7 @@ const description =
         <div>
           <h3 class="text-xl font-semibold text-gray-900 mb-3">Production Mindset</h3>
           <p class="text-gray-700 leading-relaxed">
-            Every project I work on is built with production requirements in mind—comprehensive testing, proper error
+            Every project I work on is built with production requirements in mind: comprehensive testing, proper error
             handling, documentation, and monitoring. I measure success not by initial delivery, but by long-term
             maintainability and reliability.
           </p>
@@ -194,18 +224,16 @@ const description =
         <div>
           <h3 class="text-xl font-semibold text-gray-900 mb-3">Performance-First Approach</h3>
           <p class="text-gray-700 leading-relaxed">
-            I don't optimize blindly. Every change is backed by data—benchmarks, profiling, and rigorous testing. This
+            I don't optimize blindly. Every change is backed by data: benchmarks, profiling, and rigorous testing. This
             approach led to the 5.6x improvement in Hedera's protocol buffer implementation and continues to guide my
             work on high-performance systems.
           </p>
         </div>
 
         <div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-3">Full-Stack Capability</h3>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Systems-Level Thinking</h3>
           <p class="text-gray-700 leading-relaxed">
-            From protocol design to smart contracts to cloud infrastructure, I'm comfortable working at any level of
-            the stack. This breadth allows me to understand systems holistically and make optimizations that wouldn't
-            be visible at a single layer.
+            Deep expertise across the backend stack: from protocol design and consensus algorithms to database optimization and cloud infrastructure. This vertical knowledge enables me to identify bottlenecks that single-layer optimization would miss and architect solutions that perform well end-to-end.
           </p>
         </div>
       </div>
@@ -213,7 +241,7 @@ const description =
   </section>
 
   <!-- CTA Section -->
-  <section class="bg-gray-50">
+  <section class="bg-background-light">
     <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
       <div class="text-center max-w-2xl mx-auto">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Interested in Working Together?</h2>

@@ -40,6 +40,7 @@ When making changes to this portfolio:
 ## Environment Variables
 
 The .gitignore indicates environment variables should follow this pattern:
+
 - `.env` - local configuration (not committed)
 - `.env.example` - template showing required variables (committed to repo)
 

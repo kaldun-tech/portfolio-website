@@ -5,8 +5,7 @@ interface NavLink {
 }
 
 const navLinks: NavLink[] = [
-  { label: 'Work', href: '/portfolio' },
-  { label: 'About', href: '/about' },
+  { label: 'Portfolio', href: '/portfolio' },
 ];
 
 const currentPath = new URL(Astro.request.url).pathname;
@@ -38,9 +37,9 @@ const currentPath = new URL(Astro.request.url).pathname;
         href="https://calendly.com/kaldun/meeting"
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg hover:bg-gray-800 transition-colors"
+        class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-brand-blue rounded-lg hover:bg-brand-blue-dark transition-colors"
       >
-        Schedule
+        Schedule a Call
       </a>
     </div>
   </nav>

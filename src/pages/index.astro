@@ -2,36 +2,46 @@
 import Layout from '../layouts/Layout.astro';
 import Button from '../components/Button.astro';
 import ProjectCard from '../components/ProjectCard.astro';
+import { projects } from '../data/projects';
 
 const title = 'Taras Smereka: Distributed Systems Engineer';
 const description =
   'Distributed systems engineer with 9+ years optimizing mission-critical infrastructure. Contributing to Hedera Hashgraph. Available for protocol engineering roles and consulting.';
+
+const featuredProjects = projects.filter(p => p.featured);
 ---
 
 <Layout title={title} description={description}>
   <!-- Hero Section -->
   <section class="border-b border-gray-200">
     <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-      <div class="max-w-3xl">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-          Distributed Systems Engineer Specializing in Protocol Optimization
-        </h1>
+      <div class="flex flex-col md:flex-row gap-8 items-start">
+        <img
+          src="/headshot.png"
+          alt="Taras Smereka"
+          class="w-32 h-32 rounded-full object-cover border-2 border-gray-200"
+        />
+        <div class="flex-1 max-w-3xl">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            Distributed Systems Engineer Specializing in Protocol Optimization
+          </h1>
 
-        <p class="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
-          9+ years building mission-critical infrastructure for power grids serving millions. Contributing to Hedera
-          Hashgraph protocol improvements. Available for protocol engineering roles and select consulting engagements.
-        </p>
+          <p class="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
+            9+ years building mission-critical infrastructure for power grids serving millions. Contributing to Hedera
+            Hashgraph protocol improvements. Available for protocol engineering roles and select consulting engagements.
+          </p>
 
-        <div class="flex flex-col sm:flex-row gap-4">
-          <Button href="/portfolio" variant="primary">View My Work</Button>
-          <Button
-            href="https://calendly.com/kaldun/meeting"
-            target="_blank"
-            rel="noopener noreferrer"
-            variant="secondary"
-          >
-            Schedule a Call
-          </Button>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <Button href="/portfolio" variant="primary">View My Work</Button>
+            <Button
+              href="https://calendly.com/kaldun/meeting"
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="secondary"
+            >
+              Schedule a Call
+            </Button>
+          </div>
         </div>
       </div>
     </div>
@@ -44,13 +54,13 @@ const description =
 
       <p class="text-lg text-gray-700 mb-8 leading-relaxed">
         I optimize distributed systems that can't afford to fail. My background is in SCADA systems for electrical
-        utilities—infrastructure where downtime affects millions of customers. Now I'm applying that production
+        utilities: infrastructure where downtime affects millions of customers. Now I'm applying that production
         discipline to blockchain protocols and high-performance backends.
       </p>
 
       <div class="space-y-4">
         <div class="flex gap-4">
-          <div class="flex-shrink-0 w-6 h-6 rounded-full bg-gray-900 text-white flex items-center justify-center text-sm font-semibold">
+          <div class="flex-shrink-0 w-6 h-6 rounded-full bg-brand-blue text-white flex items-center justify-center text-sm font-semibold">
             ✓
           </div>
           <div>
@@ -61,7 +71,7 @@ const description =
         </div>
 
         <div class="flex gap-4">
-          <div class="flex-shrink-0 w-6 h-6 rounded-full bg-gray-900 text-white flex items-center justify-center text-sm font-semibold">
+          <div class="flex-shrink-0 w-6 h-6 rounded-full bg-brand-blue text-white flex items-center justify-center text-sm font-semibold">
             ✓
           </div>
           <div>
@@ -70,7 +80,7 @@ const description =
         </div>
 
         <div class="flex gap-4">
-          <div class="flex-shrink-0 w-6 h-6 rounded-full bg-gray-900 text-white flex items-center justify-center text-sm font-semibold">
+          <div class="flex-shrink-0 w-6 h-6 rounded-full bg-brand-blue text-white flex items-center justify-center text-sm font-semibold">
             ✓
           </div>
           <div>
@@ -87,11 +97,11 @@ const description =
       <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Experience</h2>
 
       <div class="space-y-12">
-        <!-- AspenTech/OSI -->
+        <!-- AspenTech OSI -->
         <div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-2">AspenTech/OSI (2015-2024)</h3>
-          <p class="text-gray-600 font-medium mb-4">Senior Software Engineer - SCADA Systems</p>
-          <p class="text-gray-700 mb-4">Built and optimized mission-critical power grid control systems:</p>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">AspenTech OSI (2015-2024)</h3>
+          <p class="text-gray-600 font-medium mb-4">Senior Software Engineer - Platform Server & Distribution Management Systems</p>
+          <p class="text-gray-700 mb-4">Built and optimized mission-critical power grid control systems for utilities serving millions of customers:</p>
           <ul class="space-y-2 text-gray-700 ml-4">
             <li class="flex gap-3">
               <span class="text-gray-400">•</span>
@@ -115,20 +125,24 @@ const description =
         <!-- Open Source -->
         <div>
           <h3 class="text-xl font-semibold text-gray-900 mb-2">Open Source Contributions</h3>
-          <p class="text-gray-600 font-medium mb-4">Hedera Hashgraph Protocol Infrastructure</p>
-          <p class="text-gray-700 mb-4">Currently contributing to Hedera Hashgraph protocol infrastructure:</p>
+          <p class="text-gray-600 font-medium mb-4">Hedera Hashgraph & Hiero Protocol (4 Merged PRs)</p>
+          <p class="text-gray-700 mb-4">Contributing to Hedera's Protocol Buffer for Java library and Hiero Consensus Node:</p>
           <ul class="space-y-2 text-gray-700 ml-4">
             <li class="flex gap-3">
               <span class="text-gray-400">•</span>
-              <span>Protocol buffer serialization optimization (5.6x improvement)</span>
+              <span>DirectBufferedData optimization achieving 5.6x throughput improvement</span>
             </li>
             <li class="flex gap-3">
               <span class="text-gray-400">•</span>
-              <span>Consensus node improvements</span>
+              <span>Enhanced error messages for proto import failures</span>
             </li>
             <li class="flex gap-3">
               <span class="text-gray-400">•</span>
-              <span>Developer experience enhancements</span>
+              <span>Configurable network topology API for consensus nodes</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-gray-400">•</span>
+              <span>Performance analysis and optimization recommendations</span>
             </li>
           </ul>
         </div>
@@ -136,37 +150,43 @@ const description =
     </div>
   </section>
 
-  <!-- Technical Background Section -->
+  <!-- What I Bring Section -->
   <section class="border-b border-gray-200">
     <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Technical Background</h2>
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">What I Bring</h2>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
-          <h3 class="text-lg font-semibold text-gray-900 mb-4">Core Competencies</h3>
-          <ul class="space-y-2 text-gray-700">
-            <li class="flex gap-2">
-              <span class="text-gray-400">→</span>
-              <span>Distributed systems engineering and protocol optimization</span>
-            </li>
-            <li class="flex gap-2">
-              <span class="text-gray-400">→</span>
-              <span>Performance benchmarking and systematic bottleneck identification</span>
-            </li>
-            <li class="flex gap-2">
-              <span class="text-gray-400">→</span>
-              <span>Production systems that handle real-world scale</span>
-            </li>
-            <li class="flex gap-2">
-              <span class="text-gray-400">→</span>
-              <span>Test-driven development with comprehensive CI/CD</span>
-            </li>
-          </ul>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Production Mindset</h3>
+          <p class="text-gray-700 leading-relaxed">
+            Systems that handle real-world load, cost what you expect, and can be maintained by your team.
+          </p>
         </div>
 
         <div>
-          <h3 class="text-lg font-semibold text-gray-900 mb-4">Tech Stack</h3>
-          <div class="flex flex-wrap gap-2">
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Quantitative Approach</h3>
+          <p class="text-gray-700 leading-relaxed">
+            I don't guess at performance problems. I measure, benchmark, and prove improvements with data.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Security-First Engineering</h3>
+          <p class="text-gray-700 leading-relaxed">
+            Background in DevSecOps, OWASP best practices, and threat modeling. Every system I build considers security from the ground up: not as an afterthought, but as a core requirement alongside performance and reliability.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Deep Backend Expertise</h3>
+          <p class="text-gray-700 leading-relaxed">
+            Comfortable working across the backend infrastructure stack: protocol optimization, distributed systems, database tuning, and cloud architecture. This depth allows me to trace performance issues from the network layer through to application logic.
+          </p>
+        </div>
+
+        <div class="md:col-span-2">
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Tech Stack & Education</h3>
+          <div class="flex flex-wrap gap-2 mb-4">
             {
               ['Java', 'Python', 'Go', 'Solidity', 'Protocol Buffers', 'gRPC', 'PostgreSQL', 'AWS', 'Docker'].map(
                 (tech) => (
@@ -177,12 +197,8 @@ const description =
               )
             }
           </div>
-
-          <h3 class="text-lg font-semibold text-gray-900 mt-6 mb-4">Education</h3>
-          <ul class="space-y-2 text-gray-700 text-sm">
-            <li>BS Mathematics & Computer Science, Minor in Economics</li>
-            <li>BBA Finance & Accounting</li>
-            <li>AWS Solutions Architect Associate</li>
+          <ul class="space-y-1 text-gray-700 text-sm">
+            <li>BS Mathematics & Computer Science, Minor in Economics • BBA Finance & Accounting • AWS Solutions Architect Associate</li>
           </ul>
         </div>
       </div>
@@ -195,35 +211,15 @@ const description =
       <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Featured Projects</h2>
 
       <div class="space-y-6">
-        <ProjectCard
-          title="Hedera Protocol Buffer Optimization"
-          description="Identified and fixed serialization bottlenecks in Hedera's PBJ library through systematic benchmarking. Result: 5.6x throughput improvement in protocol buffer operations."
-          technologies={['Java', 'Protocol Buffers', 'JMH Benchmarking']}
-          links={[{ label: 'View merged PRs', href: 'https://github.com/kaldun-tech' }]}
-          featured={true}
-        />
-
-        <ProjectCard
-          title="Network Monitoring Tool"
-          description="Building real-time monitoring and analytics for Hedera network health, transaction throughput, and consensus metrics."
-          technologies={['Go', 'PostgreSQL', 'Time-series Analysis']}
-          links={[{ label: 'View repository', href: 'https://github.com/kaldun-tech/hedera-network-monitor' }]}
-          featured={true}
-        />
-
-        <ProjectCard
-          title="Token Vesting Platform"
-          description="Production-ready smart contract system for time-locked token distribution with comprehensive testing and gas optimization."
-          technologies={['Solidity', 'Hardhat', 'Go', 'Next.js', 'PostgreSQL']}
-          links={[{ label: 'View repository', href: 'https://github.com/kaldun-tech/token-vesting-smart-contract' }]}
-        />
-
-        <ProjectCard
-          title="PC Parts Price Tracker"
-          description="Serverless price monitoring with proper AWS CDK infrastructure-as-code patterns and event-driven architecture."
-          technologies={['Python', 'AWS Lambda', 'DynamoDB', 'CDK']}
-          links={[{ label: 'View repository', href: 'https://github.com/kaldun-tech/pc-parts-scraper' }]}
-        />
+        {featuredProjects.map((project) => (
+          <ProjectCard
+            title={project.title}
+            description={project.description}
+            technologies={project.technologies}
+            links={project.links}
+            featured={project.featured}
+          />
+        ))}
       </div>
 
       <div class="mt-12 pt-12 border-t border-gray-200">
@@ -233,39 +229,109 @@ const description =
     </div>
   </section>
 
-  <!-- Available For Section -->
+  <!-- Technical Writing Section -->
   <section class="border-b border-gray-200">
     <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">Available For</h2>
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Technical Writing</h2>
+      <p class="text-lg text-gray-700 mb-12">
+        I write about distributed systems, blockchain protocols, and backend engineering on my Substack.
+      </p>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="rounded-lg border border-gray-200 bg-white p-6">
-          <h3 class="text-xl font-semibold text-gray-900 mb-4">Protocol Engineering Roles</h3>
-          <p class="text-gray-700 mb-4">
-            I'm actively seeking full-time positions in protocol development, distributed systems, or blockchain
-            infrastructure.
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <a
+          href="https://taraskaldun.substack.com/p/hedera-network-monitor"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group rounded-lg border border-gray-200 bg-white p-6 hover:border-brand-blue transition-colors"
+        >
+          <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-brand-blue transition-colors">
+            Hedera Network Monitor →
+          </h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            Building a production-grade monitoring and alerting system in Go for the Hedera blockchain that tracks account balances, network health, and sends real-time alerts via webhooks.
           </p>
-        </div>
+        </a>
 
-        <div class="rounded-lg border border-gray-200 bg-white p-6">
-          <h3 class="text-xl font-semibold text-gray-900 mb-4">Select Consulting Engagements</h3>
-          <p class="text-gray-700 mb-4">
-            Through Kaldun Technologies LLC, I take on consulting projects focused on backend architecture, protocol
-            optimization, AWS infrastructure, and smart contract development.
+        <a
+          href="https://taraskaldun.substack.com/p/hedera-hashgraph-vs-ethereum"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group rounded-lg border border-gray-200 bg-white p-6 hover:border-brand-blue transition-colors"
+        >
+          <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-brand-blue transition-colors">
+            Hedera HashGraph vs Ethereum →
+          </h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            Deploying the same Solidity smart contract to both networks, demonstrating Hedera's Ethereum compatibility and significantly lower transaction costs.
           </p>
-        </div>
+        </a>
+
+        <a
+          href="https://taraskaldun.substack.com/p/building-on-ethereum-with-go-and"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group rounded-lg border border-gray-200 bg-white p-6 hover:border-brand-blue transition-colors"
+        >
+          <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-brand-blue transition-colors">
+            Building on Ethereum with Go and Next →
+          </h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            Documenting a token vesting smart contract system: a real business use case where companies manage billions in token releases to employees according to predetermined schedules.
+          </p>
+        </a>
+
+        <a
+          href="https://taraskaldun.substack.com/p/my-aws-cloud-solutions-architect"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group rounded-lg border border-gray-200 bg-white p-6 hover:border-brand-blue transition-colors"
+        >
+          <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-brand-blue transition-colors">
+            My AWS Cloud Solutions Architect Journey →
+          </h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            Chronicling the transition from software developer to cloud architect, exploring how AWS solved infrastructure problems and the certification path to Solutions Architect Associate.
+          </p>
+        </a>
+      </div>
+
+      <div class="mt-12 pt-12 border-t border-gray-200">
+        <p class="text-gray-700 mb-6">Want to read more?</p>
+        <Button href="https://taraskaldun.substack.com" target="_blank" rel="noopener noreferrer" variant="secondary">
+          Visit My Substack
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Current Focus Section -->
+  <section class="bg-background-light border-b border-gray-200">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Current Focus</h2>
+
+      <div class="space-y-6">
+        <p class="text-lg text-gray-700 leading-relaxed">
+          <strong>I'm actively seeking protocol engineering roles</strong> at companies building blockchain
+          infrastructure, distributed systems, or financial technology platforms.
+        </p>
+
+        <p class="text-lg text-gray-700 leading-relaxed">
+          I'm also available for <strong>select consulting engagements</strong> through Kaldun Technologies LLC,
+          particularly projects involving protocol optimization, blockchain development, or high-performance backend
+          systems.
+        </p>
       </div>
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section class="bg-gray-50 border-b border-gray-200">
+  <section class="border-b border-gray-200">
     <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
       <div class="text-center max-w-2xl mx-auto">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Let's Talk</h2>
         <p class="text-lg text-gray-700 mb-8">
           Whether you're looking to discuss protocol engineering, need help optimizing your systems, or just want to
-          explore opportunities—I'm here to help.
+          explore opportunities — I'm here to help.
         </p>
         <Button href="https://calendly.com/kaldun/meeting" target="_blank" rel="noopener noreferrer" variant="primary">
           Schedule a Call
