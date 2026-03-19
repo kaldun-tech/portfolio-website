@@ -75,7 +75,9 @@ const featuredProjects = projects.filter(p => p.featured);
             ✓
           </div>
           <div>
-            <p class="text-gray-700">Building network monitoring tools for blockchain infrastructure</p>
+            <p class="text-gray-700">
+              <strong>gRPC vs REST benchmarking</strong> across Go, Rust, and Python for Hedera workloads
+            </p>
           </div>
         </div>
 
@@ -84,7 +86,18 @@ const featuredProjects = projects.filter(p => p.featured);
             ✓
           </div>
           <div>
-            <p class="text-gray-700">Contributing to consensus node error handling and developer experience</p>
+            <p class="text-gray-700">
+              <strong>HCS replay library</strong> for realistic load testing with real network timing patterns
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-6 h-6 rounded-full bg-brand-blue text-white flex items-center justify-center text-sm font-semibold">
+            ✓
+          </div>
+          <div>
+            <p class="text-gray-700">Contributing to consensus node APIs and developer experience</p>
           </div>
         </div>
       </div>
@@ -125,8 +138,8 @@ const featuredProjects = projects.filter(p => p.featured);
         <!-- Open Source -->
         <div>
           <h3 class="text-xl font-semibold text-gray-900 mb-2">Open Source Contributions</h3>
-          <p class="text-gray-600 font-medium mb-4">Hedera Hashgraph & Hiero Protocol (4 Merged PRs)</p>
-          <p class="text-gray-700 mb-4">Contributing to Hedera's Protocol Buffer for Java library and Hiero Consensus Node:</p>
+          <p class="text-gray-600 font-medium mb-4">Hedera Hashgraph & Hiero Protocol (5 Merged PRs)</p>
+          <p class="text-gray-700 mb-4">Contributing to Hedera's PBJ library, Hiero Consensus Node, and Hiero SDK:</p>
           <ul class="space-y-2 text-gray-700 ml-4">
             <li class="flex gap-3">
               <span class="text-gray-400">•</span>
@@ -134,7 +147,7 @@ const featuredProjects = projects.filter(p => p.featured);
             </li>
             <li class="flex gap-3">
               <span class="text-gray-400">•</span>
-              <span>Enhanced error messages for proto import failures</span>
+              <span>Fixed TLS session resumption security vulnerability in Go SDK</span>
             </li>
             <li class="flex gap-3">
               <span class="text-gray-400">•</span>
@@ -142,7 +155,7 @@ const featuredProjects = projects.filter(p => p.featured);
             </li>
             <li class="flex gap-3">
               <span class="text-gray-400">•</span>
-              <span>Performance analysis and optimization recommendations</span>
+              <span>Improved developer onboarding with testing documentation</span>
             </li>
           </ul>
         </div>
@@ -188,7 +201,7 @@ const featuredProjects = projects.filter(p => p.featured);
           <h3 class="text-xl font-semibold text-gray-900 mb-3">Tech Stack & Education</h3>
           <div class="flex flex-wrap gap-2 mb-4">
             {
-              ['Java', 'Python', 'Go', 'Solidity', 'Protocol Buffers', 'gRPC', 'PostgreSQL', 'AWS', 'Docker'].map(
+              ['Java', 'Python', 'Go', 'Rust', 'Solidity', 'Protocol Buffers', 'gRPC', 'PostgreSQL', 'AWS', 'Docker'].map(
                 (tech) => (
                   <span class="px-3 py-1 text-sm font-medium text-gray-600 bg-gray-100 rounded">
                     {tech}
@@ -198,7 +211,7 @@ const featuredProjects = projects.filter(p => p.featured);
             }
           </div>
           <ul class="space-y-1 text-gray-700 text-sm">
-            <li>BS Mathematics & Computer Science, Minor in Economics • BBA Finance & Accounting • AWS Solutions Architect Associate</li>
+            <li>BS Mathematics & Computer Science, Minor in Economics • AWS Solutions Architect Associate</li>
           </ul>
         </div>
       </div>
@@ -238,6 +251,20 @@ const featuredProjects = projects.filter(p => p.featured);
       </p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <a
+          href="https://taraskaldun.substack.com/p/when-does-grpc-actually-beat-rest"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group rounded-lg border border-gray-200 bg-white p-6 hover:border-brand-blue transition-colors"
+        >
+          <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-brand-blue transition-colors">
+            When Does gRPC Actually Beat REST? →
+          </h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            Benchmarking Hedera API performance across Go, Rust, and Python. gRPC wins at 50+ concurrent workers (17-18% throughput gain), but REST is faster at low concurrency.
+          </p>
+        </a>
+
         <a
           href="https://taraskaldun.substack.com/p/hedera-network-monitor"
           target="_blank"
@@ -281,16 +308,44 @@ const featuredProjects = projects.filter(p => p.featured);
         </a>
 
         <a
+          href="https://taraskaldun.substack.com/p/building-a-hedera-network-health"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group rounded-lg border border-gray-200 bg-white p-6 hover:border-brand-blue transition-colors"
+        >
+          <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-brand-blue transition-colors">
+            Building a Hedera Network Health Dashboard →
+          </h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            ETL pipeline for Hedera analytics on Dune. Iterated from batch to streaming, reducing memory 16x (8GB → 500MB) and runtime from 20+ hours to minutes.
+          </p>
+        </a>
+
+        <a
           href="https://taraskaldun.substack.com/p/my-aws-cloud-solutions-architect"
           target="_blank"
           rel="noopener noreferrer"
           class="group rounded-lg border border-gray-200 bg-white p-6 hover:border-brand-blue transition-colors"
         >
           <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-brand-blue transition-colors">
-            My AWS Cloud Solutions Architect Journey →
+            My AWS Solutions Architect Journey →
           </h3>
           <p class="text-gray-700 text-sm leading-relaxed">
-            Chronicling the transition from software developer to cloud architect, exploring how AWS solved infrastructure problems and the certification path to Solutions Architect Associate.
+            From software developer to certified cloud architect. How AWS solved infrastructure problems and the path to Solutions Architect Associate certification.
+          </p>
+        </a>
+
+        <a
+          href="https://taraskaldun.substack.com/p/building-a-open-source-personal-backup"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group rounded-lg border border-gray-200 bg-white p-6 hover:border-brand-blue transition-colors"
+        >
+          <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-brand-blue transition-colors">
+            Building an Open-Source Backup System →
+          </h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            Automating the 3-2-1 backup rule across AWS S3 Glacier, Proton Drive, and air-gapped external drives. Open-source Python tool with environment-based config.
           </p>
         </a>
       </div>

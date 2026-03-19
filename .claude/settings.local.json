@@ -13,7 +13,14 @@
       "WebFetch(domain:kalduntech.com)",
       "Bash(npm run dev:*)",
       "WebFetch(domain:github.com)",
-      "WebFetch(domain:taraskaldun.substack.com)"
+      "WebFetch(domain:taraskaldun.substack.com)",
+      "Bash(tree:*)",
+      "Bash(npx astro build:*)",
+      "Bash(gh pr view:*)",
+      "Bash(gh issue view:*)",
+      "Bash(gh pr list:*)",
+      "Bash(ls:*)",
+      "Bash(head:*)"
     ],
     "deny": [],
     "ask": []

@@ -4,68 +4,91 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a personal brand portfolio website. The repository is configured to support Node.js-based web frameworks (Next.js, Nuxt, Vite, Sveltekit, Gatsby, etc.) based on the .gitignore configuration.
+Personal portfolio website for a protocol engineer targeting hiring managers at blockchain/distributed systems companies (Hedera Hashgraph, Lightning Labs, Coinbase, Kraken, and protocol startups).
 
-## Common Development Commands
+**Tech Stack:** Astro 5, Tailwind CSS, TypeScript
+**Deployment:** Vercel
+**Live Site:** https://taras-smereka.com
 
-Once the project is initialized with a package.json, expect these common patterns:
+## Development Commands
 
-- **Install dependencies**: `npm install` (or `yarn install` / `pnpm install`)
-- **Development server**: `npm run dev` (typically runs on localhost:3000 or similar)
-- **Build for production**: `npm run build`
-- **Run tests**: `npm test` or `npm run test`
-- **Linting**: `npm run lint`
-- **Type checking** (if TypeScript): `npm run type-check`
-- **Format code**: `npm run format`
+```bash
+npm install          # Install dependencies
+npm run dev          # Dev server (localhost:4321)
+npm run build        # Production build
+npm run preview      # Preview production build
+npm run format       # Format with Prettier
+```
 
-## Project Setup Phase
-
-When initially setting up this project:
-
-1. **Determine the framework**: Confirm which framework is being used (Next.js, React + Vite, Svelte, etc.)
-2. **Create package.json**: Define dependencies, scripts, and project metadata
-3. **Configure build tools**: Set up appropriate config files (tsconfig.json, vite.config.ts, next.config.js, etc.)
-4. **Environment variables**: Use .env.example as a template for required environment variables
-5. **Linting and formatting**: Configure ESLint and Prettier (or similar) for code quality
-
-## Development Workflow
-
-When making changes to this portfolio:
-
-- **Components and pages**: Store reusable components in a `components/` directory and pages in a `pages/` or `app/` directory
-- **Styling**: Use CSS Modules, Tailwind CSS, or component-scoped styles depending on the framework choice
-- **Build output**: The dist directory contains production builds - do not commit this to version control (it's in .gitignore)
-- **Testing**: Write tests for components and utility functions
-
-## Environment Variables
-
-The .gitignore indicates environment variables should follow this pattern:
-
-- `.env` - local configuration (not committed)
-- `.env.example` - template showing required variables (committed to repo)
-
-Create .env.example to document what variables are needed.
-
-## Key Directories (Expected Structure)
-
-Once initialized, the codebase will likely have:
+## Directory Structure
 
 ```
 portfolio-website/
-├── src/                    # Source code
-│   ├── components/         # Reusable React/Vue/Svelte components
-│   ├── pages/ or app/      # Page components (framework-specific)
-│   └── styles/             # Global styles
-├── public/                 # Static assets
-├── dist/ or .next/         # Build output (in .gitignore - not committed)
-├── package.json            # Project dependencies and scripts
-├── tsconfig.json           # TypeScript configuration (if using TS)
-└── [config].config.js/ts   # Framework-specific config
+├── src/
+│   ├── components/     # Astro components (Header, Footer, ProjectCard, etc.)
+│   ├── data/           # TypeScript data files (projects.ts)
+│   ├── layouts/        # Layout.astro (base template)
+│   ├── pages/          # index.astro, portfolio.astro
+│   └── styles/         # global.css (Tailwind)
+├── public/             # Static assets (images, favicon)
+├── astro.config.mjs    # Astro configuration
+├── tailwind.config.mjs # Tailwind configuration
+└── vercel.json         # Vercel deployment config
 ```
+
+## Messaging Framework (StoryBrand)
+
+Follow the StoryBrand framework: the **hiring manager is the hero**, not the portfolio owner.
+
+### Target Audience
+
+Engineering managers and technical leads at blockchain protocol companies who need to hire senior engineers they can trust to ship production code.
+
+### Their Problems
+
+| Level | Problem |
+|-------|---------|
+| External | Open protocol engineering roles to fill |
+| Internal | "What if we hire someone who interviews well but can't ship? What if they don't *really* understand distributed systems?" |
+| Philosophical | "Great protocol engineers are rare. We need someone who gets it." |
+
+### Positioning (Guide Role)
+
+- **Empathy:** Understands building mission-critical infrastructure (9 years SCADA/power grids)
+- **Authority:** Merged PRs to Hedera with measurable impact (5.6x performance improvement)
+
+### Content Guidelines
+
+1. **Lead with their needs**, not credentials ("Building reliable protocol infrastructure?" vs "I am a...")
+2. **Quantify results** - numbers are authority signals (5.6x improvement, 30-50% gas reduction)
+3. **Frame skills as solutions to their problems**, not a feature list
+4. **Clear CTAs** - Direct: "Schedule a Call" / Transitional: "View Portfolio"
+5. **Show stakes** - What happens if they hire the wrong person (bugs in consensus, security vulnerabilities)
+6. **Paint success** - Shipped improvements, reliable systems, faster team velocity
+
+### Tone
+
+- Technical and credible, not salesy
+- Confident but not arrogant
+- Concise - respect their time
+- Focus on distributed systems, protocol engineering, production reliability
+
+## Design
+
+- **Primary:** #1863DC (brand-blue)
+- **Dark accent:** #154AB8 (brand-blue-dark)
+- **Background:** #F4F4F4 / white
+- **Font:** Inter
+- Light theme only, clean/minimal aesthetic
+
+## Key Pages
+
+- **/** - Main landing page with hero, experience, projects, CTA
+- **/portfolio** - Detailed project showcase
 
 ## Important Notes
 
-- This is a frontend-focused project (portfolio website), so there's no backend development here
-- Keep assets optimized for web performance
-- Ensure the site is responsive and accessible
-- Portfolio should have proper SEO metadata
+- Keep messaging customer-centric (hiring manager as hero)
+- Prioritize quantified achievements over generic skill lists
+- All projects should demonstrate production-readiness and measurable impact
+- Ensure responsive design and proper SEO metadata
