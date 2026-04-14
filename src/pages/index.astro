@@ -6,7 +6,7 @@ import { projects } from '../data/projects';
 
 const title = 'Taras Smereka: Distributed Systems Engineer';
 const description =
-  'Distributed systems engineer with 9+ years optimizing mission-critical infrastructure. Contributing to Hedera Hashgraph. Available for protocol engineering roles and consulting.';
+  'Protocol engineer making ambitious blockchain infrastructure measurably faster. 6 merged PRs to Hedera including 5.6x performance improvement. Available for protocol engineering roles.';
 
 const featuredProjects = projects.filter(p => p.featured);
 ---
@@ -23,12 +23,15 @@ const featuredProjects = projects.filter(p => p.featured);
         />
         <div class="flex-1 max-w-3xl">
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Distributed Systems Engineer Specializing in Protocol Optimization
+            Ambitious protocols fail when infrastructure can't keep up. I make sure it does.
           </h1>
 
           <p class="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
-            9+ years building mission-critical infrastructure for power grids serving millions. Contributing to Hedera
-            Hashgraph protocol improvements. Available for protocol engineering roles and select consulting engagements.
+            People expect gRPC is faster than REST for blockchain workloads. I benchmarked it across Go, Rust, and Python. REST wins until you hit 50 concurrent workers. That's how I work: measure first, then optimize what matters.
+          </p>
+
+          <p class="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
+            9 years building infrastructure for power grids serving millions. Now applying that discipline to blockchain protocols — 6 merged PRs to Hedera, including a 5.6x performance improvement in their serialization layer.
           </p>
 
           <div class="flex flex-col sm:flex-row gap-4">
@@ -138,7 +141,7 @@ const featuredProjects = projects.filter(p => p.featured);
         <!-- Open Source -->
         <div>
           <h3 class="text-xl font-semibold text-gray-900 mb-2">Open Source Contributions</h3>
-          <p class="text-gray-600 font-medium mb-4">Hedera Hashgraph & Hiero Protocol (5 Merged PRs)</p>
+          <p class="text-gray-600 font-medium mb-4">Hedera Hashgraph & Hiero Protocol (6 Merged PRs)</p></invoke>
           <p class="text-gray-700 mb-4">Contributing to Hedera's PBJ library, Hiero Consensus Node, and Hiero SDK:</p>
           <ul class="space-y-2 text-gray-700 ml-4">
             <li class="flex gap-3">
@@ -163,57 +166,41 @@ const featuredProjects = projects.filter(p => p.featured);
     </div>
   </section>
 
-  <!-- What I Bring Section -->
+  <!-- Why Protocols Section -->
   <section class="border-b border-gray-200">
     <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">What I Bring</h2>
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Why Protocols</h2>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-3">Production Mindset</h3>
-          <p class="text-gray-700 leading-relaxed">
-            Systems that handle real-world load, cost what you expect, and can be maintained by your team.
-          </p>
-        </div>
+      <div class="space-y-6 mb-12">
+        <p class="text-lg text-gray-700 leading-relaxed">
+          I spent 9 years building SCADA systems for power utilities — infrastructure where downtime means blackouts. I know what it takes to build systems that can't fail.
+        </p>
 
-        <div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-3">Quantitative Approach</h3>
-          <p class="text-gray-700 leading-relaxed">
-            I don't guess at performance problems. I measure, benchmark, and prove improvements with data.
-          </p>
-        </div>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          Last year I made a deliberate choice: to apply that experience to protocols I actually believe in. I want my engineering work to align with what genuinely excites me: decentralization, sound money, and the infrastructure that makes them possible.
+        </p>
 
-        <div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-3">Security-First Engineering</h3>
-          <p class="text-gray-700 leading-relaxed">
-            Background in DevSecOps, OWASP best practices, and threat modeling. Every system I build considers security from the ground up: not as an afterthought, but as a core requirement alongside performance and reliability.
-          </p>
-        </div>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          So I started contributing to Hedera's open source codebase. My first significant PR achieved a 5.6x performance improvement in their protobuf serialization. Now I'm looking for protocol engineering roles at companies building serious blockchain infrastructure.
+        </p>
+      </div>
 
-        <div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-3">Deep Backend Expertise</h3>
-          <p class="text-gray-700 leading-relaxed">
-            Comfortable working across the backend infrastructure stack: protocol optimization, distributed systems, database tuning, and cloud architecture. This depth allows me to trace performance issues from the network layer through to application logic.
-          </p>
-        </div>
-
-        <div class="md:col-span-2">
-          <h3 class="text-xl font-semibold text-gray-900 mb-3">Tech Stack & Education</h3>
-          <div class="flex flex-wrap gap-2 mb-4">
-            {
-              ['Java', 'Python', 'Go', 'Rust', 'Solidity', 'Protocol Buffers', 'gRPC', 'PostgreSQL', 'AWS', 'Docker'].map(
-                (tech) => (
-                  <span class="px-3 py-1 text-sm font-medium text-gray-600 bg-gray-100 rounded">
-                    {tech}
-                  </span>
-                )
+      <div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">Tech Stack & Education</h3>
+        <div class="flex flex-wrap gap-2 mb-4">
+          {
+            ['Java', 'Python', 'Go', 'Rust', 'Solidity', 'Protocol Buffers', 'gRPC', 'PostgreSQL', 'AWS', 'Docker'].map(
+              (tech) => (
+                <span class="px-3 py-1 text-sm font-medium text-gray-600 bg-gray-100 rounded">
+                  {tech}
+                </span>
               )
-            }
-          </div>
-          <ul class="space-y-1 text-gray-700 text-sm">
-            <li>BS Mathematics & Computer Science, Minor in Economics • AWS Solutions Architect Associate</li>
-          </ul>
+            )
+          }
         </div>
+        <ul class="space-y-1 text-gray-700 text-sm">
+          <li>BS Mathematics & Computer Science, Minor in Economics • AWS Solutions Architect Associate</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -275,7 +262,7 @@ const featuredProjects = projects.filter(p => p.featured);
             Hedera Network Monitor →
           </h3>
           <p class="text-gray-700 text-sm leading-relaxed">
-            Building a production-grade monitoring and alerting system in Go for the Hedera blockchain that tracks account balances, network health, and sends real-time alerts via webhooks.
+            Built a production-grade monitoring and alerting system in Go for the Hedera blockchain that tracks account balances, network health, and sends real-time alerts via webhooks.
           </p>
         </a>
 
@@ -289,7 +276,7 @@ const featuredProjects = projects.filter(p => p.featured);
             Hedera HashGraph vs Ethereum →
           </h3>
           <p class="text-gray-700 text-sm leading-relaxed">
-            Deploying the same Solidity smart contract to both networks, demonstrating Hedera's Ethereum compatibility and significantly lower transaction costs.
+            Deployed the same Solidity smart contract to both networks, demonstrating Hedera's Ethereum compatibility and significantly lower transaction costs.
           </p>
         </a>
 
@@ -303,7 +290,7 @@ const featuredProjects = projects.filter(p => p.featured);
             Building on Ethereum with Go and Next →
           </h3>
           <p class="text-gray-700 text-sm leading-relaxed">
-            Documenting a token vesting smart contract system: a real business use case where companies manage billions in token releases to employees according to predetermined schedules.
+            Documented a token vesting smart contract system: a real business use case where companies manage billions in token releases to employees according to predetermined schedules.
           </p>
         </a>
 

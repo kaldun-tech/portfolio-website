@@ -77,7 +77,7 @@ export const projects: Project[] = [
     id: 'hedera-contributions',
     title: 'Hedera Hashgraph & Hiero Protocol Contributions',
     description:
-      "5 merged pull requests across Hedera's PBJ library, Hiero Consensus Node, and Hiero SDK. Achieved 5.6x performance improvement in DirectBufferedData operations, fixed TLS session resumption security vulnerability in the Go SDK, improved developer experience with better error messages and testing documentation, and added configurable network topology API.",
+      "6 merged pull requests across Hedera's PBJ library, Hiero Consensus Node, and Hiero SDK. Achieved 5.6x performance improvement in DirectBufferedData operations, fixed TLS session resumption security vulnerability in the Go SDK, improved developer experience with better error messages and testing documentation, and added configurable network topology API.",
     technologies: ['Java', 'Go', 'Protocol Buffers', 'JMH Benchmarking'],
     links: [
       {
