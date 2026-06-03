@@ -31,7 +31,7 @@ const featuredProjects = projects.filter(p => p.featured);
           </p>
 
           <p class="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
-            9 years building infrastructure for power grids serving millions. Now applying that discipline to blockchain protocols — 6 merged PRs to Hedera, including a 5.6x performance improvement in their serialization layer.
+            9 years building infrastructure for power grids serving millions. Now applying that discipline to blockchain protocols — 6 merged PRs to Hedera (5.6x performance improvement) and active contributions to Lightning Labs' taproot-assets and loop.
           </p>
 
           <div class="flex flex-col sm:flex-row gap-4">
@@ -141,8 +141,8 @@ const featuredProjects = projects.filter(p => p.featured);
         <!-- Open Source -->
         <div>
           <h3 class="text-xl font-semibold text-gray-900 mb-2">Open Source Contributions</h3>
-          <p class="text-gray-600 font-medium mb-4">Hedera Hashgraph & Hiero Protocol (6 Merged PRs)</p></invoke>
-          <p class="text-gray-700 mb-4">Contributing to Hedera's PBJ library, Hiero Consensus Node, and Hiero SDK:</p>
+          <p class="text-gray-600 font-medium mb-4">Hedera (6 Merged PRs) • Lightning Labs (5 PRs)</p>
+          <p class="text-gray-700 mb-4">Contributing to Hedera's PBJ library, Hiero Consensus Node, Hiero SDK, and Lightning Labs' taproot-assets and loop:</p>
           <ul class="space-y-2 text-gray-700 ml-4">
             <li class="flex gap-3">
               <span class="text-gray-400">•</span>
@@ -158,7 +158,15 @@ const featuredProjects = projects.filter(p => p.featured);
             </li>
             <li class="flex gap-3">
               <span class="text-gray-400">•</span>
-              <span>Improved developer onboarding with testing documentation</span>
+              <span>Custodian daemon error observability and gRPC status code standardization</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-gray-400">•</span>
+              <span>Retry and reorg handling for static address withdrawals</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-gray-400">•</span>
+              <span>Secure Secret type for database credential handling</span>
             </li>
           </ul>
         </div>
@@ -238,6 +246,79 @@ const featuredProjects = projects.filter(p => p.featured);
       </p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <a
+          href="https://taraskaldun.substack.com/p/getting-oriented-how-i-approach-open"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group rounded-lg border-2 border-brand-blue bg-blue-50 p-6 hover:bg-blue-100 transition-colors"
+        >
+          <span class="inline-block px-2 py-1 text-xs font-semibold text-white bg-brand-blue rounded mb-2">
+            New
+          </span>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-brand-blue transition-colors">
+            Contributing to Bitcoin: Lightning Labs Approach →
+          </h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            My systematic approach to contributing to taproot-assets and loop: reading before coding, proposing design gists before large refactors, and navigating code review at protocol depth.
+          </p>
+        </a>
+
+        <a
+          href="https://taraskaldun.substack.com/p/what-i-learned-from-the-hedera-apex"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group rounded-lg border border-gray-200 bg-white p-6 hover:border-brand-blue transition-colors"
+        >
+          <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-brand-blue transition-colors">
+            What I Learned From The Hedera Apex Hackathon →
+          </h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            Built hiero-hcs-replay, a Go library for replaying recorded message streams with timing accuracy. Placed third in the Hiero bounty track.
+          </p>
+        </a>
+
+        <a
+          href="https://taraskaldun.substack.com/p/my-first-contribution-to-the-bitcoin"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group rounded-lg border border-gray-200 bg-white p-6 hover:border-brand-blue transition-colors"
+        >
+          <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-brand-blue transition-colors">
+            My First Contribution to the Bitcoin Lightning Network →
+          </h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            My inaugural open-source contribution to taproot-assets: fixing silent failures in asset receipt handling and lessons learned about protocol engineering.
+          </p>
+        </a>
+
+        <a
+          href="https://taraskaldun.substack.com/p/the-invisible-heist-how-quantum-computers"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group rounded-lg border border-gray-200 bg-white p-6 hover:border-brand-blue transition-colors"
+        >
+          <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-brand-blue transition-colors">
+            The Invisible Heist: Quantum Computers and Crypto →
+          </h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            Examining "harvest now, decrypt later" attacks and post-quantum cryptography solutions for Bitcoin, Ethereum, and Hedera.
+          </p>
+        </a>
+
+        <a
+          href="https://taraskaldun.substack.com/p/eth-denver-week-what-these-events"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group rounded-lg border border-gray-200 bg-white p-6 hover:border-brand-blue transition-colors"
+        >
+          <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-brand-blue transition-colors">
+            ETH Denver Week: What These Events Are Actually Like →
+          </h3>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            Firsthand observations from ETH Denver, ETH Boulder, and Hedera Dev Day. Which activities provide genuine value versus hype.
+          </p>
+        </a>
+
         <a
           href="https://taraskaldun.substack.com/p/when-does-grpc-actually-beat-rest"
           target="_blank"

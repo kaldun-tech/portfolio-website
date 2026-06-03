@@ -12,6 +12,28 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'lightning-labs',
+    title: 'Lightning Labs: Taproot Assets & Loop',
+    description:
+      'Contributing to Lightning Network infrastructure with Lightning Labs. Custodian daemon error observability (#2070, merged), GenesisInfo in asset group responses (#2130), gRPC status code standardization (#2112), retry and reorg handling for static address withdrawals (loop #1134), secure Secret type for database credentials (loop #1131). Authored design gist for phased RPC error code standardization.',
+    technologies: ['Go', 'gRPC', 'Protocol Buffers', 'Bitcoin', 'Lightning Network'],
+    links: [
+      {
+        label: 'Taproot Assets PRs',
+        href: 'https://github.com/lightninglabs/taproot-assets/pulls?q=is%3Apr+author%3Akaldun-tech',
+      },
+      {
+        label: 'Loop PRs',
+        href: 'https://github.com/lightninglabs/loop/pulls?q=is%3Apr+author%3Akaldun-tech',
+      },
+      {
+        label: 'Read my approach',
+        href: 'https://taraskaldun.substack.com/p/getting-oriented-how-i-approach-open',
+      },
+    ],
+    featured: true,
+  },
+  {
     id: 'grpc-rest-benchmark',
     title: 'gRPC vs REST Performance Benchmark',
     description:
